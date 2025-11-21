@@ -12,9 +12,9 @@ export const getRendelesByRazon = async (razon) => {
     return rows;
 }
 
-export const createRendeles = async (pazon, vazon, fazon) => {
+export const createRendeles = async (razon, fazon, pazon, idopont) => {
     const [result] = await pool.execute(
-        'INSERT INTO `rendeles` (pazon, vazon, fazon, idopont) VALUES (?, ?, ?, ?)', [pazon, vazon, fazon, Now()]);
+        'INSERT INTO `rendeles` (razon, vazon, fazon, idopont) VALUES (?, ?, ?, ?)', [razon, vazon, fazon, Now()]);
 }
 
 export const deleteRendeles = async (razon) => {
