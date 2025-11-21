@@ -18,6 +18,7 @@ app.use('/api/pizza', pizzaRoutes);
 app.use('/api/vevo', vevoRoutes);
 app.use('/api/rendeles', rendelesRoutes);
 app.use('/api/tetel', tetelRoutes);
+app.use('/static', express.static('pizza_kepek'));
 
 app.listen(3000, () => {
     console.log('Szerver: http://localhost:3000');
